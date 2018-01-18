@@ -1,0 +1,11 @@
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
+
+output.elasticsearch:
+  hosts: ["256.256.256.256:9200"]
+
+setup.kibana:
+  hosts: "localhost:5601"

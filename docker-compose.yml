@@ -6,15 +6,6 @@ services:
             - discovery.type=single-node
             - cluster.name=elkdev
 
-    logstash:
-        image: docker.elastic.co/logstash/logstash-oss:6.0.0
-        volumes:
-            - ./logstash:/usr/share/logstash/config
-        links:
-            - elasticsearch
-        ports:
-            - "5044:5044"
-
     kibana:
         image: docker.elastic.co/kibana/kibana-oss:6.0.0
         links:
