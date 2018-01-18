@@ -5,6 +5,8 @@ services:
         environment:
             - discovery.type=single-node
             - cluster.name=elkdev
+        ports:
+            - "9200:9200"
 
     kibana:
         image: docker.elastic.co/kibana/kibana-oss:6.0.0
